@@ -16,6 +16,7 @@ import {
   CheckCircle2,
   AlertCircle,
   ArrowRight,
+  ShieldCheck,
 } from 'lucide-react';
 
 interface WeeklyDigestProps {
@@ -184,6 +185,36 @@ export const WeeklyDigest: React.FC<WeeklyDigestProps> = ({
           >
             <ChevronRight className="w-4 h-4" />
           </button>
+        </div>
+      </div>
+
+      {/* Phase 1 Fat Loss Goal Banner */}
+      <div className="bg-gradient-to-r from-emerald-900/50 via-slate-800/90 to-teal-900/50 border border-emerald-500/30 rounded-3xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xl backdrop-blur-md relative overflow-hidden">
+        <div className="absolute -top-12 -right-12 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="flex items-center gap-3">
+          <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 p-0.5 shadow-lg shadow-emerald-500/25 shrink-0">
+            <div className="w-full h-full bg-slate-900 rounded-[14px] flex items-center justify-center">
+              <Sparkles className="w-5 h-5 text-emerald-400" />
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <h2 className="text-sm sm:text-base font-extrabold text-white">
+                Phase 1 Fat Loss Goal: {goal.currentWeight}kg → {goal.phase1TargetWeight}kg
+              </h2>
+              <span className="text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2.5 py-0.5 rounded-full">
+                ~500 kcal Deficit / Day
+              </span>
+            </div>
+            <p className="text-xs text-slate-300 mt-0.5">
+              Target loss: ~0.5 kg/week. Keep protein high to spare lean muscle while burning body fat.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 self-end sm:self-center text-xs font-bold text-emerald-300 bg-emerald-500/15 px-3.5 py-2 rounded-2xl border border-emerald-500/30 shadow-sm">
+          <ShieldCheck className="w-4 h-4 text-emerald-400" />
+          <span>Final Goal: {goal.phase2TargetWeight}kg</span>
         </div>
       </div>
 
