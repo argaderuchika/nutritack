@@ -96,9 +96,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <h1 className="text-base sm:text-lg font-black tracking-tight text-white bg-gradient-to-r from-white via-slate-100 to-emerald-200 bg-clip-text text-transparent">
                     NutriTrack
                   </h1>
-                  <span className="text-[9px] sm:text-[10px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full uppercase tracking-wider">
-                    Fat Loss Tracker
-                  </span>
+
                 </div>
                 <p className="text-[11px] sm:text-xs text-slate-400">
                   {currentWeight} kg → {targetWeight} kg (Phase 1)
@@ -242,11 +240,10 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center justify-center p-1 rounded-2xl bg-slate-800/70 border border-slate-700/60 max-w-sm mx-auto shadow-inner">
           <button
             onClick={() => onViewChange('diary')}
-            className={`flex-1 py-1.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${
-              activeView === 'diary'
+            className={`flex-1 py-1.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${activeView === 'diary'
                 ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 shadow-md shadow-emerald-500/20'
                 : 'text-slate-400 hover:text-white'
-            }`}
+              }`}
           >
             <BookOpen className="w-3.5 h-3.5" />
             <span>Daily Diary</span>
@@ -254,11 +251,10 @@ export const Header: React.FC<HeaderProps> = ({
 
           <button
             onClick={() => onViewChange('weekly')}
-            className={`flex-1 py-1.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${
-              activeView === 'weekly'
+            className={`flex-1 py-1.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${activeView === 'weekly'
                 ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 shadow-md shadow-emerald-500/20'
                 : 'text-slate-400 hover:text-white'
-            }`}
+              }`}
           >
             <BarChart3 className="w-3.5 h-3.5" />
             <span>Overall Weekly Digest</span>
