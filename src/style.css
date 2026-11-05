@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --sat: env(safe-area-inset-top, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
+    --sar: env(safe-area-inset-right, 0px);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Prevent iOS Safari 16px zoom-in on input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+/* Radiant Ambient Mesh Glow Backgrounds (Luxury Dark) */
+.dark-gradient-bg {
+  background-color: #080e1a;
+  background-image:
+    radial-gradient(at 15% 15%, rgba(16, 185, 129, 0.12) 0px, transparent 50%),
+    radial-gradient(at 85% 20%, rgba(6, 182, 212, 0.10) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(99, 102, 241, 0.10) 0px, transparent 50%),
+    radial-gradient(at 20% 85%, rgba(168, 85, 247, 0.08) 0px, transparent 50%);
+}
+
+/* Light Theme (Vibrant & Clean) */
+.theme-light {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(at 10% 10%, rgba(16, 185, 129, 0.08) 0px, transparent 45%),
+    radial-gradient(at 90% 15%, rgba(14, 165, 233, 0.08) 0px, transparent 45%),
+    radial-gradient(at 80% 85%, rgba(168, 85, 247, 0.06) 0px, transparent 45%);
+  color: #0f172a;
+}
+
+.theme-light header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: #e2e8f0 !important;
+}
+
+.theme-light header h1 {
+  color: #0f172a !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+.theme-light .bg-slate-900,
+.theme-light .bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+.theme-light .bg-slate-800\/80,
+.theme-light .bg-slate-800\/70,
+.theme-light .bg-slate-800\/60,
+.theme-light .bg-slate-800\/50,
+.theme-light .bg-slate-800 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06) !important;
+}
+
+.theme-light .border-slate-700,
+.theme-light .border-slate-700\/60,
+.theme-light .border-slate-700\/70,
+.theme-light .border-slate-800 {
+  border-color: #e2e8f0 !important;
+}
+
+.theme-light .text-white,
+.theme-light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+.theme-light .text-slate-200,
+.theme-light .text-slate-300 {
+  color: #334155 !important;
+}
+
+.theme-light .text-slate-400 {
+  color: #64748b !important;
+}
+
+.theme-light .bg-slate-900\/60,
+.theme-light .bg-slate-900\/40,
+.theme-light .bg-slate-900\/80 {
+  background-color: #f1f5f9 !important;
+}
+
+.theme-light .divide-slate-700\/40 > :not([hidden]) ~ :not([hidden]),
+.theme-light .divide-slate-700\/50 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #f1f5f9 !important;
+}
+
+/* iPhone Dynamic Island & Notch Safe Area Utilities */
+.pt-safe-top {
+  padding-top: max(env(safe-area-inset-top, 0px), 0.75rem);
+}
+
+.pb-safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 1rem);
+}
+
+.bottom-safe-dock {
+  bottom: max(env(safe-area-inset-bottom, 0px), 0.875rem);
+}
+
+.pb-mobile-content {
+  padding-bottom: calc(max(env(safe-area-inset-bottom, 0px), 0.75rem) + 5rem);
+}
+
+/* Smooth iOS Momentum Scrolling */
+.smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.6);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.9);
+}

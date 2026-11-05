@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="flame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7b7" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#10b981" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)" />
+  <rect x="12" y="12" width="488" height="488" rx="116" stroke="#10b981" stroke-opacity="0.25" stroke-width="6" />
+  <g filter="url(#shadow)">
+    <!-- Main Flame / Nutrition Leaf Shape -->
+    <path d="M256 80 C265 140 310 180 340 220 C375 268 375 330 340 380 C310 422 260 440 216 428 C160 412 124 350 136 290 C144 250 172 210 200 176 C206 200 220 220 240 230 C234 190 244 140 256 80 Z" fill="url(#flame)" />
+    <!-- Inner bright highlight flame -->
+    <path d="M256 240 C264 270 290 290 300 320 C310 350 295 380 270 395 C245 408 220 398 208 375 C198 355 204 330 216 310 C225 325 240 335 252 330 C246 300 250 270 256 240 Z" fill="url(#glow)" opacity="0.9" />
+  </g>
+</svg>
